@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "BookExamFrontend"
+  "defaultProject": "BookExamFrontend",
+  "cli": {
+    "analytics": "3bdf5d41-1d86-4ef0-8149-9ec0c8187dc4"
+  }
 }

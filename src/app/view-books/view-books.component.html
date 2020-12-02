@@ -1,0 +1,43 @@
+<div class="container">
+    <h1>Book Store</h1>
+    <div class="navbar-nav">
+        <a class="nav-item nav-link " href="http://localhost:4200/viewbooks">Home</a>
+    <div class='row' id="filter">
+        <br>
+
+        <div class='col-md-2'>Filter by Book Title:</div>
+        <div class='col-md-4'>
+          <input type='text'
+          #mySelect
+         (change)="getBookByTitle(mySelect.value)" />
+        </div>
+      </div>
+<br>
+   
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Book ID</th>
+      <th>Name of book</th>
+      <th>Book description</th>
+      <th>Book price</th>
+      <th>Book status</th>
+      <th>Quantity</th>
+      <th>Buy book</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of bookList">
+      <td>{{book.id}}</td>
+      <td>{{book.name}}</td>
+      <td>{{book.description}}</td>
+      <td>{{book.price | currency}}</td>
+      <td>{{book.status}}</td>
+      <td>{{book.quantity}}</td>
+      <td><button type="button" class="btn btn-primary" (click)="getBooks(book.id)">Get Book</button></td>
+    </tr>
+  </tbody>
+  </table>
+  
+  </div>
+  
